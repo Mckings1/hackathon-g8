@@ -150,6 +150,7 @@ export const RiskAssessment = ({
       score += 15;
       factors.push(`Medium-risk country: ${data.country}`);
     }
+    // console.log(`after country: ${score}`);
 
     // Geolocation mismatch analysis
     const userGeoLocation = getUserGeolocation();
@@ -181,7 +182,7 @@ export const RiskAssessment = ({
       score += 10;
       factors.push("Uncommon email domain");
     }
-
+    // console.log(`after email: ${score}`);
     // Device type risk
     if (data.deviceType === "mobile") {
       score += 5;
@@ -190,7 +191,8 @@ export const RiskAssessment = ({
       score += 8;
       factors.push("Tablet device usage");
     }
-
+    // console.log(`device type: ${score}`);
+    // console.log(factors);
     // Phone validation
     if (data.phone.length < 10) {
       score += 15;
@@ -201,6 +203,7 @@ export const RiskAssessment = ({
     const behaviorAnalysis = detectBehaviorAnomalies(behaviorMetrics);
     score += behaviorAnalysis.score * 0.3; // Weight behavioral factors
     factors.push(...behaviorAnalysis.flags);
+    console.log(`Behavior:${behaviorAnalysis.score}`);
 
     // Simulated document quality analysis
     const documentAnalysis = analyzeDocumentQuality("Driver's License"); // Simulate document type
