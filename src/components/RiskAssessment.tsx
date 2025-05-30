@@ -139,9 +139,9 @@ export const RiskAssessment = ({
       "Iran",
       "North Korea",
       "Syria",
-      "Nigeria",
+      "Russia",
     ];
-    const mediumRiskCountries = ["Russia", "China", "Belarus"];
+    const mediumRiskCountries = ["Nigeria", "Ghana", "Togo"];
 
     if (highRiskCountries.includes(data.country)) {
       score += 25;
