@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Shield, Zap } from 'lucide-react';
+import React from "react";
+import { Shield, Zap } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -14,12 +13,14 @@ export const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                AdaptiveKYC
+                Awari
               </h1>
-              <p className="text-sm text-gray-600">Self-Adaptive Identity Verification</p>
+              <p className="text-sm text-gray-600">
+                Self-Adaptive Identity Verification
+              </p>
             </div>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
