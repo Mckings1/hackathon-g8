@@ -284,7 +284,7 @@ export const RiskAssessment = ({
     }));
 
     // Simulate AI processing
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 4000));
 
     const { score, factors } = calculateRiskScore(formData);
     const level = getRiskLevel(score);
@@ -295,7 +295,7 @@ export const RiskAssessment = ({
     // Continue to verification after a brief display
     setTimeout(() => {
       onAssessmentComplete(level, formData);
-    }, 2000);
+    }, 12000);
   };
 
   if (isAssessing || riskScore !== null) {
